@@ -4,6 +4,7 @@ import {FiDownload} from 'react-icons/fi';
 // components
 import Social from '@/components/Social';
 import Photo from '@/components/Photo';
+import Stats from '@/components/Stats';
 
 const Home = () => {
   return (
@@ -17,17 +18,17 @@ const Home = () => {
             <h1 className='h1 mb-6'>
             Hello I'm <br /> <span className='text-accent'>Kn Kanhaiya</span>
             </h1>
-            <p className='max-w-[500px] mb-9 text-white/80 text-justify'>I am a Software Engineer skilled in C#, JAVA, .NET Core, React, Docker, SQL Server and Azure Cloud, with a focus on Microservices, and Clean Architecture. Currently at Incedo, and I am Azure-certified (AZ-204, AZ-900).
+            <p className='max-w-[500px] mb-9 text-white/80 text-justify'>I am a Software Developer skilled in C#, JAVA, .NET Core, React, Docker, SQL Server and Azure Cloud, with a focus on Microservices, and Clean Architecture. Currently at Incedo, and I am Azure-certified (AZ-204, AZ-900).
             </p>
             {/* btn and socials */}
             <div className='flex flex-col xl:flex-row items-center gap-8'>
-              <Button size="lg" className="border border-white bg-primary rounded-full uppercase flex items-center gap-2">
-                <span className='text-white'>Download CV</span>
-                <FiDownload className="text-xl text-white" />
+              <Button size="lg" className="border border-white bg-primary rounded-full uppercase flex items-center gap-2 text-white hover:text-primary">
+                <span>Download CV</span>
+                <FiDownload className="text-xl" />
               </Button>
 
               <div className='mb-8 xl:mb-0'>
-                <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-white rounded-full flex justify-center items-center text-white" />
+                <Social containerStyles="flex gap-6" iconStyles=" text-white hover:text-primary hover:bg-accent w-9 h-9 border border-white rounded-full flex justify-center items-center" />
               </div>
             </div>
           </div>
@@ -38,6 +39,7 @@ const Home = () => {
         </div>
         
       </div>
+      <Stats />
     </section>
   );
 };
