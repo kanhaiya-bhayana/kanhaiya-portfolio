@@ -55,6 +55,46 @@ const experience = {
   items: [
     {
       company: "Incedo Inc.",
+      position: "Software Engineer",
+      duration: "July 2023 - Present"
+    },
+    {
+      company: "Incedo Inc.",
+      position: "Software Engineer",
+      duration: "July 2023 - Present"
+    },
+    {
+      company: "Incedo Inc.",
+      position: "Software Engineer",
+      duration: "July 2023 - Present"
+    },
+    {
+      company: "Incedo Inc.",
+      position: "Software Engineer",
+      duration: "July 2023 - Present"
+    },
+    {
+      company: "Incedo Inc.",
+      position: "Software Engineer",
+      duration: "July 2023 - Present"
+    },
+    {
+      company: "Incedo Inc.",
+      position: "Software Engineer",
+      duration: "July 2023 - Present"
+    },
+    {
+      company: "Incedo Inc.",
+      position: "Software Engineer",
+      duration: "July 2023 - Present"
+    },
+    {
+      company: "Incedo Inc.",
+      position: "Software Engineer",
+      duration: "July 2023 - Present"
+    },
+    {
+      company: "Incedo Inc.",
       position: "Software Engineer Trainee",
       duration: "Jan 2023 - June 2023"
     },
@@ -160,13 +200,57 @@ const Resume = () => {
       className='min-h-[80vh] flex items-center justify-center py-12 xl:py-0'
       >
         <div className="container mx-auto">
-          <Tabs defaultValue="experience">
-            <TabsList>
+          <Tabs defaultValue="experience"
+            className="flex flex-col xl:flex-row gap-[60px]"
+          >
+            <TabsList className="flex flex-col lg:w-3/6 w-4/6 max-w-[380] mx-auto xl:mx-0 gap-6">
               <TabsTrigger value="experience">Experience</TabsTrigger>
               <TabsTrigger value="education">Education</TabsTrigger>
               <TabsTrigger value="skills">Skills</TabsTrigger>
               <TabsTrigger value="about-me">About me</TabsTrigger>
             </TabsList>
+
+            {/* content */}
+            <div className='min-h-[70vh] w-full'>
+              {/* experience */}
+              <TabsContent value="experience" className="w-full">
+                <div className='flex flex-col gap-[30px] text-center xl:text-left'>
+                  <h3 className='text-4xl font-bold'>{experience.title}</h3>
+                  <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{experience.description}</p>
+                  <ScrollArea className="h-[400px]">
+                    <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]'>
+                      {experience.items.map((item, index) => {
+                        return <li key={index} className='bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
+                            <span>{item.duration}</span>
+                            <h3>{item.position}</h3>
+                            <div>
+                              {/* dot */}
+                              <span>
+
+                              </span>
+                              <p>
+                                {item.company}
+                              </p>
+                            </div>
+                          </li>
+                      })}
+                    </ul>
+                  </ScrollArea>
+                </div>
+              </TabsContent>
+              {/* education */}
+              <TabsContent value="education" className="w-full">
+                education
+              </TabsContent>
+              {/* skills */}
+              <TabsContent value="skills" className="w-full">
+                skills
+              </TabsContent>
+              {/* about-me */}
+              <TabsContent value="about-me" className="w-full">
+                about-me
+              </TabsContent>
+            </div>
           </Tabs>
         </div>
     </motion.div>
