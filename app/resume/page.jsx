@@ -1,3 +1,4 @@
+"use client";
 import {
   FaDocker,
   FaReact,
@@ -142,13 +143,36 @@ const skills = {
 
 };
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@components/ui/tabs';
-import { TbTooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@components/ui/tooltip';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TbTooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
-function Resume() {
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { motion } from 'framer-motion';
+
+const Resume = () => {
   return (
-    <div>Resume page</div>
-  )
+    <motion.div 
+      initial={{opacity: 0}} 
+      animate={{
+        opacity: 1, 
+        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" }
+      }} 
+      className='min-h-[80vh] flex items-center justify-center py-12 xl:py-0'
+      >
+        <div className="container mx-auto">
+          <Tabs defaultValue="experience">
+            <TabsList>
+              <TabsTrigger value="experience">Experience</TabsTrigger>
+              <TabsTrigger value="education">Education</TabsTrigger>
+              <TabsTrigger value="skills">Skills</TabsTrigger>
+              <TabsTrigger value="about-me">About me</TabsTrigger>
+            </TabsList>
+          </Tabs>
+        </div>
+    </motion.div>
+
+  );
 }
 
-export default Resume
+export default Resume;
+
