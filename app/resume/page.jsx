@@ -98,11 +98,6 @@ const experience = {
       position: "Software Engineer Trainee",
       duration: "Jan 2023 - June 2023"
     },
-    {
-      company: "Incedo Inc.",
-      position: "Software Engineer",
-      duration: "July 2023 - Present"
-    },
   ]
 };
 
