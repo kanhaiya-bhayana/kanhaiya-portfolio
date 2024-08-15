@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image'
 const Photo = () => {
     return (
-        <div className="w-full h-full relative">
+        <div className="w-[400px] h-[400px] relative">
             <motion.div
                 initial={{opacity:0}}
                 animate={{
