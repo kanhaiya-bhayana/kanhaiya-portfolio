@@ -22,7 +22,8 @@ export default function RootLayout({ children }) {
       <head><link rel="icon" href="./favicon.ico" sizes="any" /></head>
       <body className={jetbrainsMono.variable}>
         <Header />
-        <PageTransition>{children}</PageTransition>
+          {children}
+        {/* <PageTransition>{children}</PageTransition> */}
       </body>
     </html>
   );

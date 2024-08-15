@@ -15,7 +15,7 @@ const Home = () => {
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className='text-xl'>Software Developer</span>
-            <h1 className='h1 mb-6'>
+            <h1 className='h2 mb-6'>
             Hello I'm <br /> <span className='text-accent'>Kn Kanhaiya</span>
             </h1>
             <p className='max-w-[500px] mb-9 text-white/80 text-justify'>I am a Software Developer skilled in C#, JAVA, .NET Core, React, Docker, SQL Server and Azure Cloud, with a focus on Microservices, and Clean Architecture. Currently at Incedo, and I am Azure-certified (AZ-204, AZ-900).
