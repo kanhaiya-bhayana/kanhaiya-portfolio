@@ -17,7 +17,7 @@ import { GrServices } from "react-icons/gr";
 
 const about = {
   title: 'About me',
-  description: "I began my professional journey in 2023 as a Software Engineer trainee at Incedo Inc. Upon successfully completing my internship, I transitioned into the role of a Software Engineer. Currently, I am a Software Developer at Incedo, with expertise in C#, Java, .NET Core, React, Docker, SQL Server, and Azure Cloud. My focus is on Microservices and Clean Architecture, and I hold Azure certifications (AZ-204, AZ-900).",
+  description: "I began my professional journey in 2023 as a Software Engineer trainee at Incedo Inc. Upon successfully completing my internship, I transitioned into the role of a Software Engineer. Currently, I am a Software Engineer at Incedo, with expertise in C#, Java, .NET Core, React, Docker, SQL Server, and Azure Cloud. My focus is on Microservices and Clean Architecture, and I hold Azure certifications (AZ-204, AZ-900).",
   info: [
     {
       fieldName: "Name",
@@ -51,7 +51,7 @@ const about = {
 const experience = {
   icon: '/assets/resume/badge.svg',
   title: 'My experience',
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "",
   items: [
     {
       company: "Incedo Inc.",
@@ -70,8 +70,18 @@ const experience = {
 const education = {
   icon: '/assets/resume/cap.svg',
   title: 'My education',
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "",
   items: [
+    {
+      institution: "Online Udemy Course",
+      degree: "Docker",
+      duration: "2024"
+    },
+    {
+      institution: "Online Udemy Course",
+      degree: "Clean Architecture",
+      duration: "2024"
+    },
     {
       institution: "Microsoft Certification",
       degree: "Azure Developer Associate - AZ204",
@@ -99,7 +109,7 @@ const education = {
 // skills data
 const skills = {
   title: "My skills",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "",
   slikkList: [
     {
       icon: <SiCsharp />,
@@ -245,7 +255,7 @@ const Resume = () => {
                 <div className='flex flex-col gap-[30px]'>
                   <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                     <h3 className='text-4xl font-bold'>{skills.title}</h3>
-                    <p className=' text-white/60 mx-auto xl:mx-0'>{skills.description}</p>
+                    <p className=' text-white/60 mx-auto xl:mx-0 text-justify'>{skills.description}</p>
                   </div>
                   <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4'>
                     {skills.slikkList.map((skill, index) => {

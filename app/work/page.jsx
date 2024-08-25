@@ -19,30 +19,39 @@ import Test from '@/components/Test';
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    titile: "project 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    stack: [{ name: "Html 5" }, { name: "C#" }, { name: "Asp.Net Core" }, { name: "SQL Server" }],
+    category: "backend",
+    titile: "Clean Architecture",
+    description: ["Successfully completed a Clean Architecture solution, incorporating CQRS and the MediatR design pattern. This journey was challenging, given my initial unfamiliarity with these concepts, but it has been incredibly rewarding.","I applied Clean Architecture principles to the Accounts Solution. For those looking for a straightforward yet comprehensive implementation of Clean Architecture alongside CQRS and MediatR, this project serves as a solid reference.", "To enhance the scalability and maintainability of the solution, I also implemented Docker containerization. This ensures a consistent and reliable deployment process across different environments.",],
+    stack: [{ name: "Clean Architecture" }, { name: "CQRS & MediatR" }, { name: "Azure" }, { name: "Docker" }],
     image: "1",
-    github: "https://github.com/kanhaiya-bhayana",
+    github: "https://github.com/kanhaiya-dev/Clean.Architecture",
   },
   {
     num: "02",
-    category: "backend",
-    titile: "project 2",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    stack: [{ name: "Html 5" }, { name: "C#" }, { name: "Asp.Net Core" }, { name: "SQL Server" }],
-    image: "2",
-    github: "https://github.com/kanhaiya-bhayana",
+    category: "fullstack",
+    titile: "FMS",
+    description: ["Spearheading the development of a sophisticated File Management System (FMS) project aimed at revolutionizing file organization and accessibility.", " Developingthe system with a focus on user-centric design, employing intuitive file storage, dynamic folder organization, seamless file modification, and rapid file retrieval functionalities.", "Utilizing cutting-edge technologies including React for the frontend, .NET Core for the backend, and leveraging Web APIs to facilitate seamless communication between components."],
+    stack: [{ name: "React" }, { name: "C#" }, { name: "Asp.Net Core" }, { name: "SQL Server" }, { name: "Azure Cloud" }],
+    image: "1",
+    github: "https://github.com/kanhaiya-bhayana-inc/IncedoFMS-back-end",
   },
   {
     num: "03",
     category: "fullstack",
-    titile: "project 3",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    stack: [{ name: "Html 5" }, { name: "C#" }, { name: "Asp.Net Core" }, { name: "SQL Server" }],
+    titile: "E-Commerce WebApp - MVC",
+    description: [" Developed an ecommerce WebApplication in .NET Core MVC, using Microservices, Stripe, Azure Queues & Topics, and Ocelot.", "Includes the Functionalities of Sign-up, Sign-in using JWT Authentication and the features are managing the orders and inventory.", "Integrated a Stripe Payment Gateway and an API gateway for the backend microservice using Ocelot.", "Integrated a Service Bus from Azure to read messages from the Queue and send an email to the customers."],
+    stack: [{ name: "Azure" }, { name: "C#" }, { name: "Asp.Net Core" }, { name: "SQL Server" }],
+    image: "2",
+    github: "https://github.com/kanhaiya-bhayana/dotnet-microservices",
+  },
+  {
+    num: "04",
+    category: "fullstack",
+    titile: "Asset Advisor Portfolio",
+    description: ["DevelopedanAdvisor Dashboard to help clients achieve their financial goals and objectives. It is a web application and includes the features of clients and investment management operations.", "Ledthebackenddevelopment of the project during the internship time period.", "Implementedthe Clean Architecture (3 layered) and the Repository Pattern.", ],
+    stack: [{ name: "React" }, { name: "C#" }, { name: "Asp.Net Core" }, { name: "Azure" }],
     image: "3",
-    github: "https://github.com/kanhaiya-bhayana",
+    github: "https://github.com/kanhaiya-bhayana-inc/asset-advisors-ui",
   },
 ]
 
@@ -73,8 +82,8 @@ const Work = () => {
               </div>
               {/* project category */}
               <h2 className='text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize'>{project.category} project</h2>
-              {/* project description */}
-              <p className='text-white/60'>{project.description}</p>
+              {/* project title */}
+              <h3 className='text-white/60 text-2xl'>{project.titile}</h3>
               {/* stack */}
               <ul className='flex gap-4'>
                 {[project.stack.map((item, index) => {
@@ -116,13 +125,16 @@ const Work = () => {
                     {/* content */}
                     <ScrollArea className="h-[400px]">
                       <ul className=' flex flex-col gap-3 ml-8 mr-8 text-justify list-disc'>
-                        <li className='text-white/60'>Spearheading the development of a sophisticated File Management System (FMS) project aimed at revolutionizing file organization
+                        {[project.description.map((item,index) => {
+                          return <li className='text-white/60' key={index}>{item}</li>
+                        })]}
+                        {/* <li className='text-white/60'>Spearheading the development of a sophisticated File Management System (FMS) project aimed at revolutionizing file organization
                         and accessibility.</li>
                         <li className='gap- text-white/60'>Developingthe system with a focus on user-centric design, employing intuitive file storage, dynamic folder organization, seamless file
                         modification, and rapid file retrieval functionalities.</li>
                         <li className='gap- text-white/60'>Utilizing cutting-edge technologies including React for the frontend, .NET Core for the backend, and leveraging Web APIs to facilitate
                         seamless communication between components.</li>
-                        <li className='gap- text-white/60'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, doloremque cumque? Qui, et voluptates! Atque eum aliquam a iure laudantium at vitae ullam ipsa commodi ipsum. Itaque, consequatur nobis. Nisi.]</li>
+                        <li className='gap- text-white/60'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, doloremque cumque? Qui, et voluptates! Atque eum aliquam a iure laudantium at vitae ullam ipsa commodi ipsum. Itaque, consequatur nobis. Nisi.]</li> */}
                       </ul>
                     </ScrollArea>
                   </div>
