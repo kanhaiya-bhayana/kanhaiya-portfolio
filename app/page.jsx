@@ -15,11 +15,11 @@ const Home = () => {
         <div className='flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24'>
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className='text-xl'>Software Developer</span>
+            <span className='text-xl'>Software Engineer</span>
             <h1 className='h2 mb-6'>
             Hello I'm <br /> <span className='text-accent'>Kn Kanhaiya</span>
             </h1>
-            <p className='max-w-[500px] mb-9 text-white/80 text-justify'>I am a Software Developer skilled in C#, JAVA, .NET Core, React, Docker, SQL Server and Azure Cloud, with a focus on Microservices, and Clean Architecture. Currently at Incedo, and I am Azure-certified (AZ-204, AZ-900).
+            <p className='max-w-[500px] mb-9 text-white/80 text-justify'>I am a Software Engineer skilled in C#, JAVA, .NET Core, React, Docker, SQL Server and Azure Cloud, with a focus on Microservices, and Clean Architecture. Currently at Incedo, and I am Azure-certified (AZ-204, AZ-900).
             </p>
             {/* btn and socials */}
             <div className='flex flex-col xl:flex-row items-center gap-8'>
