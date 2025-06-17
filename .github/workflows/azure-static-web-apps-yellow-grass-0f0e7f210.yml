@@ -22,7 +22,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16' # Use the Node.js version supported by your app
+          node-version: '18.17.0' # Set Node.js version as required by Next.js
       - name: Install Dependencies
         run: npm install
       - name: Build Application
@@ -35,7 +35,6 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations (i.e. PR comments)
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "/" # App source code path
           api_location: "" # API source code path - optional
           output_location: ".next" # Built app content directory for Next.js
