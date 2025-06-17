@@ -38,7 +38,7 @@ jobs:
           app_location: "/" # App source code path
           api_location: "" # API source code path - optional
           output_location: ".next" # Built app content directory for Next.js
-          #skip_deploy_on_missing_secrets: true
+          skip_deploy_on_missing_secrets: true
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
