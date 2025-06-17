@@ -1,0 +1,10 @@
+"responseOverrides": {
+  "routes": [
+    {
+      "route": "/images/*",
+      "headers": {
+        "Cache-Control": "no-store"
+      }
+    }
+  ]
+}
