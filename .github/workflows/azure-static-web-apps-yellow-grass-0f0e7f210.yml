@@ -36,7 +36,7 @@ jobs:
           action: "upload"
           app_location: "/"
           api_location: ""
-          output_location: ".next" # Changed from ".next" to "out"
+          output_location: "" # Changed from ".next" to "out"
           skip_deploy_on_missing_secrets: true
 
   close_pull_request_job:
