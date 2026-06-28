@@ -7,8 +7,55 @@ export const experience = [
   /* ──────────────────────────────────────────────── */
   {
     title: 'Software Engineer',
+    org: 'Wissen Technology (Client – Macquarie Global)',
+    date: 'Aug 2025 – Present',
+    color: '#f46fa0',
+    icon: <GoBriefcase />,
+    summary: [
+      'Contributed to front-office analytics platforms supporting 100+ daily users by designing backend services for financial risk analysis and regulatory reporting systems.',
+      'Designed and enhanced services for trade exposure aggregation and capital calculations, processing millions of records daily and improving reporting accuracy.',
+      'Developed and optimized business logic for financial capital computation and risk aggregation workflows, reducing report generation time by 25%+.',
+      'Implemented scheduled batch processing pipelines handling 500K+ financial records per day, ensuring timely data ingestion, transformation, and alerting.',
+      'Participated in migration of 10+ legacy services to cloud-ready microservices, improving deployment efficiency and system maintainability.',
+      'Architected and implemented an AI-driven data quality framework that automated validation of 100K+ scraped records, reducing manual review effort by 70%.'
+    ]
+  },
+
+  {
+    title: 'AI Hackathon – ScrapGuard DQ',
+    org: 'Macquarie AI Hackathon',
+    date: '2026',
+    color: '#7670ff',
+    icon: <GiArchiveResearch />,
+    summary: [
+      'Built ScrapGuard, an AI-powered Data Quality platform that validates scraped datasets using deterministic rules, statistical anomaly detection, and a LangGraph-based AI agent with RAG.',
+      'Developed a Streamlit dashboard that automates anomaly detection, investigation, and explainable data quality analysis.',
+      'Tech Stack: Python • Streamlit • LangGraph • Claude Sonnet • RAG • Pandas • DuckDuckGo API.'
+    ]
+  },
+
+  {
+    title: 'Personal Project — Open Source',
+    org: 'DebugAI (debuai)',
+    date: 'Jan 2026 – Present',
+    color: '#49d179',
+    icon: <GiArchiveResearch />,
+    summary: [
+      'Built and published an AI-powered CLI tool (<code>pip install debuai</code>) that parses stack traces across 5 languages (Python, Java, Go, C#, Node.js) and delivers instant root cause analysis, fix suggestions, and confidence scoring.',
+      'Designed a multi-provider AI backend supporting OpenAI, Anthropic, and NVIDIA with automatic key detection and zero vendor lock-in.',
+      'Architected a modular parser registry with language auto-detection, structured JSON output mode for CI/CD pipeline integration, and GitHub issue search to surface known fixes automatically.',
+      'Shipped with 80+ unit tests, GitHub Actions CI/CD, and full PyPI distribution.'
+    ],
+    links: [
+      { href: 'https://pypi.org/project/debuai/', label: 'PyPI' },
+      { href: 'https://github.com/kanhaiya-bhayana/debuai', label: 'GitHub' }
+    ]
+  },
+
+  {
+    title: 'Software Engineer',
     org: 'Incedo',
-    date: 'Jul 2023 – Present',
+    date: 'Jul 2023 – Jul 2025',
     color: '#f46fa0',                 // pink accent
     icon: <GoBriefcase />,
     summary: [

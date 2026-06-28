@@ -15,7 +15,7 @@ import {
 
 const about = {
   title: 'About me',
-  description: "I began my professional journey in 2023 as a Software Engineer trainee at Incedo Inc. Upon successfully completing my internship, I transitioned into the role of a Software Engineer. Currently, I am a Software Engineer at Incedo, with expertise in C#, Java, .NET Core, React, Docker, SQL Server, and Azure Cloud. My focus is on Microservices and Clean Architecture, and I hold Azure certifications (AZ-204, AZ-900).",
+  description: "I began my professional journey in 2023 as a Software Engineer trainee at Incedo Inc. After completing the internship, I transitioned into a full-time Software Engineer role and later joined Wissen Technology, where I build backend analytics services for Macquarie Global. I focus on AI-driven data quality, regulatory risk reporting, RAG/LLM workflows, cloud-ready microservices, and open-source tooling. My technical expertise includes Python, C#, Azure, Streamlit, Docker, and modern analytics pipelines.",
   info: [
     {
       fieldName: "Name",
@@ -27,7 +27,7 @@ const about = {
     },
     {
       fieldName: "Experiance",
-      fieldValue: "2 Years"
+      fieldValue: "4 Years"
     },
     {
       fieldName: "Nationality",
@@ -114,6 +114,10 @@ const skills = {
       name: "java",
     },
     {
+      // icon: <FaJava />,
+      name: "c#",
+    },
+    {
       // icon: <DiDotnet />,
       name: "spring",
     },
@@ -149,6 +153,22 @@ const skills = {
     {
       // icon: <FaReact />,
       name: "react.js",
+    },
+    {
+      // icon: <FaReact />,
+      name: "python",
+    },
+    {
+      // icon: <FaReact />,
+      name: "ai",
+    },
+    {
+      // icon: <FaReact />,
+      name: "rag",
+    },
+    {
+      // icon: <FaReact />,
+      name: "llm",
     },
     {
       // icon: <SiAzuredevops />,

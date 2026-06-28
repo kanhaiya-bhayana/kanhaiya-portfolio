@@ -48,11 +48,25 @@ export default function Timeline() {
               dangerouslySetInnerHTML={{ __html: item.summary }}
             />
           )}
-          {item.url && (
+          {item.links ? (
+            <div className="flex flex-wrap gap-3 pt-3">
+              {item.links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 underline"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          ) : item.url ? (
             <Link href={item.url} target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">
               View Paper
             </Link>
-          )}
+          ) : null}
         </VerticalTimelineElement>
       ))}
     </VerticalTimeline>

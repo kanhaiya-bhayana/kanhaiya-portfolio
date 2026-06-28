@@ -53,6 +53,32 @@ const projects = [
     image: "3",
     github: "https://github.com/kanhaiya-bhayana-inc/asset-advisors-ui",
   },
+  {
+    num: "05",
+    category: "open-source",
+    titile: "DebugAI",
+    description: [
+      "Built and published an AI-powered CLI tool that parses stack traces across Python, Java, Go, C#, and Node.js to deliver instant root cause analysis, confidence scoring, and fix suggestions.",
+      "Designed a multi-provider AI backend with OpenAI, Anthropic, and NVIDIA support, automatic key detection, and zero vendor lock-in.",
+      "Architected a modular parser registry with language auto-detection, structured JSON output for CI/CD integration, and GitHub issue search to surface known fixes automatically."
+    ],
+    stack: [{ name: "Python" }, { name: "CLI" }, { name: "AI" }, { name: "PyPI" }],
+    image: "4",
+    github: "https://github.com/kanhaiya-bhayana/debuai",
+  },
+  {
+    num: "06",
+    category: "hackathon",
+    titile: "ScrapGuard DQ",
+    description: [
+      "Built ScrapGuard, an AI-powered data quality platform for validating scraped datasets using deterministic rules, statistical anomaly detection, and a LangGraph-based AI agent with RAG.",
+      "Developed a Streamlit dashboard that automates anomaly detection, investigation, and explainable data quality analysis.",
+      "Showcased real-time data quality validation workflows with Python, Streamlit, LangGraph, Claude Sonnet, and DuckDuckGo API integrations."
+    ],
+    stack: [{ name: "Python" }, { name: "Streamlit" }, { name: "LangGraph" }, { name: "RAG" }, { name: "Pandas" }],
+    image: "5",
+    github: "https://github.com/kanhaiya-bhayana",
+  },
 ]
 
 
@@ -94,18 +120,20 @@ const Work = () => {
               <div className='border border-white/20'></div>
               {/* buttons */}
               <div>
-                <Link href={project.github}>
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger className='w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center group'>
-                        <FaGithub className='text-white text-3xl' />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>GitHub repository</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+                {project.github ? (
+                  <Link href={project.github}>
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger className='w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center group'>
+                          <FaGithub className='text-white text-3xl' />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>GitHub repository</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                ) : null}
               </div>
 
             </div>
