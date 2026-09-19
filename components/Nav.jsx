@@ -17,6 +17,10 @@ const links = [
         path: "/work"
     },
     {
+        name: "java memory",
+        path: "/java-memory-management"
+    },
+    {
         name: "resume",
         path: "/resume"
     },
